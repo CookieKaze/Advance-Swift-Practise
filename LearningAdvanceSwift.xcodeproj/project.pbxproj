@@ -22,6 +22,7 @@
 		1DED04831EAE638E00AF99E8 /* ObservableSequencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED04811EAE638E00AF99E8 /* ObservableSequencesViewController.swift */; };
 		1DED04841EAE638E00AF99E8 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED04821EAE638E00AF99E8 /* SubjectsViewController.swift */; };
 		1DED04861EAE647500AF99E8 /* TransformObservablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED04851EAE647500AF99E8 /* TransformObservablesViewController.swift */; };
+		1DED04881EAE6D4500AF99E8 /* RXSwiftProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DED04871EAE6D4500AF99E8 /* RXSwiftProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1DED04811EAE638E00AF99E8 /* ObservableSequencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableSequencesViewController.swift; sourceTree = "<group>"; };
 		1DED04821EAE638E00AF99E8 /* SubjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		1DED04851EAE647500AF99E8 /* TransformObservablesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformObservablesViewController.swift; sourceTree = "<group>"; };
+		1DED04871EAE6D4500AF99E8 /* RXSwiftProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXSwiftProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		1DED047F1EAE631200AF99E8 /* RXSwift */ = {
 			isa = PBXGroup;
 			children = (
+				1DED04871EAE6D4500AF99E8 /* RXSwiftProtocol.swift */,
 				1DED04811EAE638E00AF99E8 /* ObservableSequencesViewController.swift */,
 				1DED04821EAE638E00AF99E8 /* SubjectsViewController.swift */,
 				1DED04851EAE647500AF99E8 /* TransformObservablesViewController.swift */,
@@ -278,6 +281,7 @@
 			files = (
 				1DED04841EAE638E00AF99E8 /* SubjectsViewController.swift in Sources */,
 				1DED04531EAE614500AF99E8 /* ViewController.swift in Sources */,
+				1DED04881EAE6D4500AF99E8 /* RXSwiftProtocol.swift in Sources */,
 				1DED047E1EAE62FB00AF99E8 /* InjectionViewController.swift in Sources */,
 				1DED04831EAE638E00AF99E8 /* ObservableSequencesViewController.swift in Sources */,
 				1DED047C1EAE62FB00AF99E8 /* DeviceManager.swift in Sources */,
