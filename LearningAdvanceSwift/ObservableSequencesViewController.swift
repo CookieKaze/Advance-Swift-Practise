@@ -9,13 +9,7 @@
 import UIKit
 import RxSwift
 
-class ObservableSequencesViewController: UIViewController {
-    
-    public func exampleOf(description: String, action: (Void) -> Void) {
-        print("\n ----- Example of: \(description)-----")
-        action()
-        
-    }
+class ObservableSequencesViewController: UIViewController, RXSwiftProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()

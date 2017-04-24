@@ -9,14 +9,9 @@
 import UIKit
 import RxSwift
 
-class SubjectsViewController: UIViewController {
+class SubjectsViewController: UIViewController, RXSwiftProtocol {
     
     let disposeBag = DisposeBag()
-    
-    public func exampleOf(description: String, action: (Void) -> Void) {
-        print("\n ----- Example of: \(description)-----")
-        action()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

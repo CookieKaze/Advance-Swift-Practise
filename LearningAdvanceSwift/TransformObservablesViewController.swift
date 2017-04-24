@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransformObservablesViewController: UIViewController {
+class TransformObservablesViewController: UIViewController, RXSwiftProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
