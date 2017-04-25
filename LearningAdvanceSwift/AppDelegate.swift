@@ -7,16 +7,54 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, NotificationCenterProtocol {
+class AppDelegate: UIResponder, UIApplicationDelegate, NotificationCenterProtocol, UNUserNotificationCenterDelegate  {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        UNUserNotificationCenter.current().delegate = self
+        requestNotificationAuthorization()
+        
         return true
+    }
+    
+    //Handling notification when app is in foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Update the app interface directly.
+        
+        // Play a sound.
+        completionHandler(UNNotificationPresentationOptions.alert)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.notification.request.content.categoryIdentifier == "TIMER_EXPIRED" {
+            // Handle the actions for the expired timer.
+            if response.actionIdentifier == "SNOOZE_ACTION" {
+                // Invalidate the old timer and create a new one...
+                print("Snooze action tapped")
+            }
+            else if response.actionIdentifier == "STOP_ACTION" {
+                // Invalidate the timer. . .
+                print("Stop action tapped")
+            }
+        }
+        
+        if response.actionIdentifier == UNNotificationDismissActionIdentifier {
+            print("The user dismissed the notification without taking action")
+        }
+        else if response.actionIdentifier == UNNotificationDefaultActionIdentifier {
+            print("The user launched the app")
+        }
+        
+        // Else handle actions for other notification types...
+        
+        completionHandler()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
